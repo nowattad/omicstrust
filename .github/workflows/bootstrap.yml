@@ -1,0 +1,25 @@
+name: Bootstrap OmicsTrust source
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  restore-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Restore curated public source
+        shell: bash
+        run: |
+          cat .bootstrap/part-* | base64 --decode > /tmp/omicstrust-public-source.tar.gz
+          tar -xzf /tmp/omicstrust-public-source.tar.gz
+          rm -rf .bootstrap .github/workflows/bootstrap.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "OpenAI Build Week submission: OmicsTrust evidence audit platform"
+          git push origin HEAD:main
