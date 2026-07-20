@@ -17,7 +17,8 @@ jobs:
         run: |
           cat .bootstrap/part-* | base64 --decode > /tmp/omicstrust-public-source.tar.gz
           tar -xzf /tmp/omicstrust-public-source.tar.gz
-          rm -rf .bootstrap .github/workflows/bootstrap.yml
+          find . -name '._*' -delete
+          rm -rf .bootstrap .github/workflows
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
