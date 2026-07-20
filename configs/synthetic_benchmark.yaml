@@ -1,0 +1,9 @@
+n_cells: 300
+n_genes: 120
+rank: 4
+dropout_rate: 0.2
+batch_strength: 0.5
+n_components: 6
+random_state: 42
+sweeps:
+  snr: [0.25, 0.5, 1.0, 2.0]

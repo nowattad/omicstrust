@@ -1,0 +1,8 @@
+reproducibility:
+  capture_environment: true
+  capture_package_versions: true
+  save_input_fingerprint: true
+  compare_key_outputs:
+    - summary.json
+    - trust_report.json
+    - signal_report.json

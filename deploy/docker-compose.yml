@@ -1,0 +1,24 @@
+services:
+  omicstrust:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    image: omicstrust/private-audit:local
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../data:/data/input:ro
+      - ../results/platform:/data/omicstrust/platform
+    environment:
+      OMICSTRUST_HOME: /data/omicstrust
+      # Set for private-network API auth:
+      # OMICSTRUST_API_TOKEN: replace-with-strong-token
+    command:
+      - omicstrust
+      - serve
+      - --host
+      - 0.0.0.0
+      - --port
+      - "8000"
+      - --results-root
+      - /data/omicstrust/platform

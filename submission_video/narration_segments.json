@@ -1,0 +1,74 @@
+[
+  {
+    "id": "01_title",
+    "title": "Evidence before interpretation",
+    "caption": "A trust layer for high-dimensional omics",
+    "narration": "OmicsTrust is an evidence audit system for high-dimensional omics. Built with Codex and GPT-5.6, it asks one question before interpretation: is this signal trustworthy, or is it confounding?"
+  },
+  {
+    "id": "02_problem",
+    "title": "Clean outputs can hide fragile evidence",
+    "caption": "Significance is not the same as scientific trust",
+    "narration": "Omics pipelines can produce clean plots and significant p-values while batch effects, missing metadata, or unstable subspaces drive the result. That creates false confidence and costly validation failures."
+  },
+  {
+    "id": "03_engine",
+    "title": "One conservative audit",
+    "caption": "QC to signal to risk to stability to claim boundary",
+    "narration": "It audits H5AD or CSV data for quality, structural signal, empirical null calibration, batch and donor risk, technical covariates, stability, and reproducibility. It returns a trust gate, failure hierarchy, claim matrix, evidence ledger, and HTML, JSON, and PDF reports."
+  },
+  {
+    "id": "04_real_demo",
+    "title": "Stable does not mean interpretable",
+    "caption": "PASS plus HIGH STABILITY plus HIGH BATCH RISK equals UNSAFE",
+    "narration": "This is a real result. Quality passes, signal is detected, and stability is high. But batch risk is high, so trust is unsafe and interpretation is blocked. Absence of evidence is marked unknown, never safe."
+  },
+  {
+    "id": "05_gpt",
+    "title": "GPT-5.6 with hard scientific guardrails",
+    "caption": "Natural-language guidance; deterministic statistics stay authoritative",
+    "narration": "Evidence Copilot adds GPT-5.6 without replacing the deterministic engine. Researchers ask in natural language; the registry validates the exact workflow. GPT-5.6 explains evidence and limits, but cannot change statistics or silently reroute. Raw matrices and patient rows stay local."
+  },
+  {
+    "id": "06_pc11",
+    "title": "VANISH PC11 / VasoGate",
+    "caption": "A retrospective treatment-response discovery",
+    "narration": "In VANISH, a randomized septic-shock trial dataset, OmicsTrust screened 25 transcriptomic components across 116 patients and 28,220 features. PC11 was the strongest internal treatment-response interaction: odds ratio 0.1688, Wald p 0.00377, likelihood-ratio p 0.001258, and FDR 0.03145."
+  },
+  {
+    "id": "07_robustness",
+    "title": "The signal survived internal challenges",
+    "caption": "Permutation, bootstrap, covariate, and metadata checks",
+    "narration": "Permutation p was 0.003996, bootstrap direction stability was 99.9 percent, and measured metadata explained 1.793 percent of PC11. Mortality patterns reversed across PC11-high and PC11-low groups. This is an intriguing retrospective hypothesis, not a clinical rule."
+  },
+  {
+    "id": "08_impact",
+    "title": "Potential world impact",
+    "caption": "Move fewer fragile findings into expensive validation",
+    "narration": "If independently reproduced, PC11 could help test whether molecular state modifies vasopressor response, sharpen future sepsis studies, and prioritize mechanisms for wet-lab validation. More broadly, OmicsTrust could stop misleading signals earlier, saving research time and carrying only auditable evidence into expensive experiments."
+  },
+  {
+    "id": "09_boundary",
+    "title": "The claim boundary is the product",
+    "caption": "Internal signal now; independent validation next",
+    "narration": "The current boundary is strict: internal signal only. No biomarker qualification, treatment recommendation, causal mechanism, or clinical use. Locked external validation on independent data is required."
+  },
+  {
+    "id": "10_outreach",
+    "title": "Scientific review is in motion",
+    "caption": "Founder-reported outreach status; no endorsement implied",
+    "narration": "I shared the report with Professor Anthony Gordon, Professor Tom van der Poll, and Doctor David Antcliffe. According to my ongoing correspondence, it was welcomed for scientific review, and possible re-analysis is being discussed. This is not endorsement, replication, or institutional validation."
+  },
+  {
+    "id": "11_codex",
+    "title": "Built and hardened with Codex",
+    "caption": "Focused product, tested workflows, auditable release",
+    "narration": "Codex helped build the focused product: workflow registry, API, private web console, reports, security hardening, and regression tests. It also exposed report-asset failures, mobile overflow, and release-package leakage. The current suite passes 119 tests, with 7 intentionally skipped."
+  },
+  {
+    "id": "12_close",
+    "title": "OmicsTrust",
+    "caption": "Evidence before interpretation",
+    "narration": "OmicsTrust does not manufacture confidence. It makes evidence auditable before a result becomes an expensive decision. Research use only."
+  }
+]

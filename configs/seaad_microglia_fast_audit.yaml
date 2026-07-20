@@ -1,0 +1,74 @@
+project:
+  name: seaad_lec_microglia_fast_challenge
+  output_dir: results/seaad_lec_microglia_fast
+  random_state: 42
+
+data:
+  path: null
+  layer: null
+  use_raw: false
+
+keys:
+  batch_key: null
+  donor_key: null
+  label_key: null
+  technical_covariates:
+    - audit_total_counts
+    - audit_n_genes
+    - audit_number_of_umis
+    - audit_genes_detected
+    - audit_doublet_score
+    - audit_fraction_mito
+
+preprocessing:
+  enabled: true
+  normalize_total: true
+  target_sum: 10000
+  log1p: true
+  hvg_selection: false
+  n_top_genes: 3000
+  scale: false
+  residualize: false
+
+signal:
+  method: ssi
+  n_components: 15
+  covariance: weighted
+  solver: randomized
+  regularization: 1.0e-08
+
+nulls:
+  enabled: true
+  method: within_batch_permutation
+  n_permutations: 30
+  quantile: 0.95
+  n_jobs: 1
+
+risk:
+  batch_association_threshold: 0.35
+  technical_covariate_threshold: 0.35
+
+stability:
+  enabled: true
+  n_bootstraps: 8
+  subsample_fraction: 0.8
+
+baselines:
+  pca: true
+  truncated_svd: true
+  factor_analysis: false
+  scanpy: false
+  scvi_audit: false
+  harmony_audit: false
+
+reports:
+  html: true
+  markdown: true
+  json: true
+  figures: true
+  dpi: 150
+
+reproducibility:
+  capture_environment: true
+  capture_package_versions: true
+  save_input_fingerprint: true

@@ -1,0 +1,33 @@
+### Health
+GET http://127.0.0.1:8765/health
+
+### List case studies
+GET http://127.0.0.1:8765/api/case-studies
+
+### Inspect local dataset
+POST http://127.0.0.1:8765/api/inspect/path
+Content-Type: application/json
+
+{
+  "data_path": "examples/synthetic.h5ad"
+}
+
+### Run audit from local path
+POST http://127.0.0.1:8765/api/audits
+Content-Type: application/json
+
+{
+  "data_path": "examples/synthetic.h5ad",
+  "output_dir": "results/platform_demo/runs/synthetic_api_demo",
+  "batch_key": "batch",
+  "label_key": "signal_label",
+  "config_path": "configs/singlecell_audit.yaml",
+  "background": false
+}
+
+### Get jobs
+GET http://127.0.0.1:8765/api/jobs
+
+### Optional auth header when OMICSTRUST_API_TOKEN is set
+GET http://127.0.0.1:8765/api/jobs
+X-OmicsTrust-Token: replace_me

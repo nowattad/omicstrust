@@ -1,0 +1,10 @@
+.venv
+data
+results
+outputs
+work
+__pycache__
+*.pyc
+.pytest_cache
+.DS_Store
+OmicsTrust_Backups

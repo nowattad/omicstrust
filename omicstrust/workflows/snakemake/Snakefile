@@ -1,0 +1,9 @@
+configfile: "config.yaml"
+
+rule audit:
+    input:
+        config["input"]
+    output:
+        directory(config["output"])
+    shell:
+        "omicstrust audit {input} --batch-key {config[batch_key]} --label-key {config[label_key]} --output {output}"

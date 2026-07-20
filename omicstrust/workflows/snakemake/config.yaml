@@ -1,0 +1,4 @@
+input: examples/synthetic.h5ad
+output: results/snakemake_audit
+batch_key: batch
+label_key: signal_label

@@ -1,0 +1,21 @@
+.DS_Store
+.pytest_cache/
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Large or local runtime data
+data/
+results/
+outputs/
+work/
+
+# Local notebooks/runtime checkpoints
+.ipynb_checkpoints/
+
+# Environment and secrets
+.env
+.env.*
+*.pem
+*.key

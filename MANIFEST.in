@@ -1,0 +1,5 @@
+prune scripts
+prune results
+prune data
+prune buyer_demo
+prune docs

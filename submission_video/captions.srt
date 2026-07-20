@@ -1,0 +1,47 @@
+1
+00:00:00,050 --> 00:00:09,750
+OmicsTrust is an evidence audit system for high-dimensional omics. Built with Codex and GPT-5.6, it asks one question before interpretation: is this signal trustworthy, or is it confounding?
+
+2
+00:00:10,350 --> 00:00:20,230
+Omics pipelines can produce clean plots and significant p-values while batch effects, missing metadata, or unstable subspaces drive the result. That creates false confidence and costly validation failures.
+
+3
+00:00:20,830 --> 00:00:35,200
+It audits H5AD or CSV data for quality, structural signal, empirical null calibration, batch and donor risk, technical covariates, stability, and reproducibility. It returns a trust gate, failure hierarchy, claim matrix, evidence ledger, and HTML, JSON, and PDF reports.
+
+4
+00:00:35,800 --> 00:00:45,680
+This is a real result. Quality passes, signal is detected, and stability is high. But batch risk is high, so trust is unsafe and interpretation is blocked. Absence of evidence is marked unknown, never safe.
+
+5
+00:00:46,280 --> 00:01:01,440
+Evidence Copilot adds GPT-5.6 without replacing the deterministic engine. Researchers ask in natural language; the registry validates the exact workflow. GPT-5.6 explains evidence and limits, but cannot change statistics or silently reroute. Raw matrices and patient rows stay local.
+
+6
+00:01:02,040 --> 00:01:24,260
+In VANISH, a randomized septic-shock trial dataset, OmicsTrust screened 25 transcriptomic components across 116 patients and 28,220 features. PC11 was the strongest internal treatment-response interaction: odds ratio 0.1688, Wald p 0.00377, likelihood-ratio p 0.001258, and FDR 0.03145.
+
+7
+00:01:24,860 --> 00:01:41,140
+Permutation p was 0.003996, bootstrap direction stability was 99.9 percent, and measured metadata explained 1.793 percent of PC11. Mortality patterns reversed across PC11-high and PC11-low groups. This is an intriguing retrospective hypothesis, not a clinical rule.
+
+8
+00:01:41,740 --> 00:01:57,510
+If independently reproduced, PC11 could help test whether molecular state modifies vasopressor response, sharpen future sepsis studies, and prioritize mechanisms for wet-lab validation. More broadly, OmicsTrust could stop misleading signals earlier, saving research time and carrying only auditable evidence into expensive experiments.
+
+9
+00:01:58,110 --> 00:02:07,790
+The current boundary is strict: internal signal only. No biomarker qualification, treatment recommendation, causal mechanism, or clinical use. Locked external validation on independent data is required.
+
+10
+00:02:08,390 --> 00:02:21,690
+I shared the report with Professor Anthony Gordon, Professor Tom van der Poll, and Doctor David Antcliffe. According to my ongoing correspondence, it was welcomed for scientific review, and possible re-analysis is being discussed. This is not endorsement, replication, or institutional validation.
+
+11
+00:02:22,290 --> 00:02:37,470
+Codex helped build the focused product: workflow registry, API, private web console, reports, security hardening, and regression tests. It also exposed report-asset failures, mobile overflow, and release-package leakage. The current suite passes 119 tests, with 7 intentionally skipped.
+
+12
+00:02:38,070 --> 00:02:44,420
+OmicsTrust does not manufacture confidence. It makes evidence auditable before a result becomes an expensive decision. Research use only.

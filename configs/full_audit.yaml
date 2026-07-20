@@ -1,0 +1,6 @@
+nulls:
+  n_permutations: 100
+stability:
+  n_bootstraps: 20
+reports:
+  dpi: 300

@@ -1,0 +1,45 @@
+{
+  "case_study_id": "vanish_vasogate_pc11",
+  "status": "preserved_research_stage_discovery",
+  "dataset": {
+    "name": "VANISH",
+    "accession": "E-MTAB-7581",
+    "omics_type": "whole_blood_transcriptomics",
+    "patients_analyzed": 116,
+    "expression_features": 28220,
+    "top_variable_features": 5000,
+    "principal_components_screened": 25
+  },
+  "primary_result": {
+    "top_candidate_axis": "PC11",
+    "interaction_term": "C(vasopressor)[T.Vasopressin]:PC11",
+    "beta": -1.77897,
+    "odds_ratio_per_1sd": 0.16881,
+    "wald_p": 0.00377,
+    "likelihood_ratio_p": 0.001258,
+    "benjamini_hochberg_fdr": 0.03145,
+    "permutation_p": 0.003996,
+    "bootstrap_negative_direction_stability": 0.999,
+    "metadata_explanation_r2": 0.01793
+  },
+  "subgroup_descriptive_mortality": {
+    "pc11_high_noradrenaline": 0.4,
+    "pc11_high_vasopressin": 0.121,
+    "pc11_low_noradrenaline": 0.238,
+    "pc11_low_vasopressin": 0.459,
+    "interpretation": "Descriptive observed rates only; not causal estimates or a treatment rule."
+  },
+  "what_can_be_claimed": [
+    "A retrospective OmicsTrust screen identified PC11 as the strongest candidate treatment-response axis among 25 screened components in the analyzed VANISH cohort.",
+    "The reported interaction passed the stated multiple-testing, permutation, bootstrap-direction, metadata-explanation, and covariate challenge checks within VANISH."
+  ],
+  "what_cannot_be_claimed": [
+    "PC11 is not an externally validated biomarker.",
+    "PC11 must not be used to select vasopressor treatment.",
+    "The result does not prove causal mechanism, clinical utility, therapeutic efficacy, or safety.",
+    "A re-analysis of VANISH alone is reproducibility evidence, not independent-cohort validation."
+  ],
+  "validation_required": true,
+  "clinical_use_allowed": false,
+  "ruo_disclaimer": "Research Use Only. Not for clinical decision-making or treatment selection."
+}

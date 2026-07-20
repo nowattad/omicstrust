@@ -1,0 +1,59 @@
+project:
+  name: omicstrust_scib_pancreas_stress
+  output_dir: results/test_02_scib_pancreas_raw_fixed
+  random_state: 42
+data:
+  path: data/real/scib_pancreas.h5ad
+  layer: null
+  use_raw: false
+keys:
+  batch_key: tech
+  donor_key: null
+  label_key: celltype
+  technical_covariates:
+    - size_factors
+preprocessing:
+  enabled: true
+  normalize_total: true
+  target_sum: 10000
+  log1p: true
+  hvg_selection: true
+  n_top_genes: 2000
+  scale: false
+  residualize: false
+signal:
+  method: ssi
+  n_components: 20
+  covariance: weighted
+  solver: randomized
+  regularization: 1.0e-8
+nulls:
+  enabled: true
+  method: within_batch_permutation
+  n_permutations: 20
+  quantile: 0.95
+  n_jobs: 1
+risk:
+  batch_association_threshold: 0.5
+  technical_covariate_threshold: 0.5
+stability:
+  enabled: true
+  n_bootstraps: 10
+  subsample_fraction: 0.8
+baselines:
+  pca: true
+  truncated_svd: true
+  factor_analysis: false
+  scanpy: false
+  scvi_audit: false
+  harmony_audit: false
+reports:
+  html: true
+  markdown: true
+  json: true
+  figures: true
+  dpi: 150
+reproducibility:
+  capture_environment: true
+  capture_package_versions: true
+  save_input_fingerprint: true
