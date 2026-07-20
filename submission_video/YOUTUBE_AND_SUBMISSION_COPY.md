@@ -16,7 +16,7 @@ Founder-reported outreach status: the report has been shared with Professor Anth
 
 Built with Codex and GPT-5.6. Research Use Only.
 
-Repository: [REPOSITORY URL]
+Repository: https://github.com/nowattad/omicstrust
 
 # Competition Form
 
@@ -38,6 +38,6 @@ GPT-5.6 powers an optional Evidence Copilot that interprets natural-language res
 
 ## Required Final Fields
 
-- Repository URL: `[ADD URL]`
+- Repository URL: `https://github.com/nowattad/omicstrust`
 - Public YouTube URL: `[ADD URL]`
 - Codex `/feedback` session ID: `[ADD ID]`
